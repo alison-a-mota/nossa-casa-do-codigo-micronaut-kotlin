@@ -44,9 +44,7 @@ dependencies {
     runtimeOnly("mysql:mysql-connector-java")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
-
 }
-
 
 application {
     mainClass.set("br.com.zup.ApplicationKt")
@@ -66,6 +64,4 @@ tasks {
             jvmTarget = "11"
         }
     }
-
-
 }

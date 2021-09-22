@@ -10,7 +10,7 @@ plugins {
 version = "0.1"
 group = "br.com.zup"
 
-val kotlinVersion=project.properties.get("kotlinVersion")
+val kotlinVersion = project.properties.get("kotlinVersion")
 repositories {
     mavenCentral()
 }
@@ -44,6 +44,15 @@ dependencies {
     runtimeOnly("mysql:mysql-connector-java")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    // testes
+    testAnnotationProcessor("io.micronaut:micronaut-inject-java")
+    testImplementation("io.micronaut:micronaut-http-client")
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.mockito:mockito-core:3.8.0")
+    testImplementation("io.micronaut.test:micronaut-test-junit5:2.3.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testImplementation("com.h2database:h2")
 }
 
 application {
